@@ -22,7 +22,7 @@ impl Solution {
             word2.len()
         };
 
-        let mut string = String::from("");
+        let mut string = String::with_capacity(word1.len() + word2.len());
         for i in 0usize..max {
             if i < word1.len() {
                 string.push(word1.chars().nth(i).unwrap());
